@@ -17,6 +17,25 @@
 
 	// Set *default* container specific settings.json values on container create.
 	"settings": {
+		"local-history.exclude": [
+			"**/.history/**",
+			"**/.vscode/**",
+			"**/node_modules/**",
+			"**/typings/**",
+			"**/out/**",
+			"**/Code/User/**",
+			"**/vendor/**",
+			"**/temp/**",
+			"**/storage/**",
+			"**/runtime/**",
+			"**/images/**"
+		],
+		"local-history.path": "/home/vscode/backup/local history",
+		"lldb.executable": "/usr/bin/lldb",
+		"files.watcherExclude": {
+			"**/target/**": true
+		},
+		"rust-analyzer.checkOnSave.command": "clippy",
 		"go.toolsManagement.checkForUpdates": "local",
 		"go.useLanguageServer": true,
 		"go.gopath": "/go",
@@ -25,7 +44,19 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"golang.Go"
+		"golang.Go",
+		"mutantdino.resourcemonitor",
+		"formulahendry.code-runner",
+		"streetsidesoftware.code-spell-checker",
+		"vadimcn.vscode-lldb",
+		"serayuzgur.crates",
+		"editorconfig.editorconfig",
+		"tamasfe.even-better-toml",
+		"eamodio.gitlens",
+		"golang.go",
+		"xyz.local-history",
+		"matklad.rust-analyzer",
+		"gruntfuggly.todo-tree"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
