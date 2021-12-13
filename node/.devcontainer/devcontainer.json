@@ -12,11 +12,62 @@
         }
     },
     // Set *default* container specific settings.json values on container create.
-    "settings": {},
+    "settings": {
+        "local-history.exclude": [
+            "**/.history/**",
+            "**/.vscode/**",
+            "**/node_modules/**",
+            "**/typings/**",
+            "**/out/**",
+            "**/Code/User/**",
+            "**/vendor/**",
+            "**/temp/**",
+            "**/storage/**",
+            "**/runtime/**",
+            "**/images/**"
+        ],
+        "local-history.path": "/home/node/backup/local history",
+        "files.associations": {
+            "*.cjson": "jsonc",
+            "*.wxss": "css",
+            "*.wxs": "javascript"
+        },
+        "emmet.includeLanguages": {
+            "wxml": "html"
+        },
+        "vetur.format.defaultFormatter.js": "vscode-typescript",
+        "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+        "[html]": {
+            "editor.defaultFormatter": "vscode.html-language-features"
+        },
+        "[javascript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[vue]": {
+            "editor.defaultFormatter": "octref.vetur"
+        }
+    },
     // Add the IDs of extensions you want installed when the container is created.
     "extensions": [
-        "dbaeumer.vscode-eslint"
-    ],
+		"dbaeumer.vscode-eslint",
+		"mutantdino.resourcemonitor",
+		"formulahendry.code-runner",
+		"streetsidesoftware.code-spell-checker",
+		"kamikillerto.vscode-colorize",
+		"pranaygp.vscode-css-peek",
+		"editorconfig.editorconfig",
+		"eamodio.gitlens",
+		"ecmel.vscode-html-css",
+		"mkaufman.htmlhint",
+		"xyz.local-history",
+		"hookyqr.minify",
+		"eg2.vscode-npm-script",
+		"christian-kohler.npm-intellisense",
+		"esbenp.prettier-vscode",
+		"stylelint.vscode-stylelint",
+		"gruntfuggly.todo-tree",
+		"octref.vetur"
+	],
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // "forwardPorts": [],
     // Use 'postCreateCommand' to run commands after the container is created.
