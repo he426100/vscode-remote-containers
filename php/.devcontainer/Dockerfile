@@ -28,3 +28,5 @@ USER vscode
 WORKDIR /home/vscode/.composer
 RUN echo '{"require":{"squizlabs/php_codesniffer":"^3.5","phpmd/phpmd":"^2.9","friendsofphp/php-cs-fixer":"^2.16","slince/composer-registry-manager":"^2.0"}}' > composer.json \
     && composer global install
+
+WORKDIR /workspaces
