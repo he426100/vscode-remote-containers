@@ -22,3 +22,9 @@ RUN pecl install redis \
 
 # [Optional] Uncomment this line to install global node packages.
 RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g zx" 2>&1
+
+# composer
+USER vscode
+WORKDIR /home/vscode/.composer
+RUN echo '{"require":{"squizlabs/php_codesniffer":"^3.5","phpmd/phpmd":"^2.9","friendsofphp/php-cs-fixer":"^2.16","slince/composer-registry-manager":"^2.0"}}' > composer.json \
+    && composer global install

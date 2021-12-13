@@ -14,14 +14,59 @@
     },
     // Set *default* container specific settings.json values on container create.
     "settings": {
-        "php.validate.executablePath": "/usr/local/bin/php"
+        "local-history.exclude": [
+            "**/.history/**",
+            "**/.vscode/**",
+            "**/node_modules/**",
+            "**/typings/**",
+            "**/out/**",
+            "**/Code/User/**",
+            "**/vendor/**",
+            "**/temp/**",
+            "**/storage/**",
+            "**/runtime/**",
+            "**/images/**"
+        ],
+        "local-history.path": "/home/vscode/backup/local history",
+        "php.validate.executablePath": "/usr/local/bin/php",
+        "phpcs.executablePath": "/home/vscode/.composer/vendor/bin/phpcs",
+        "php.executablePath": "/usr/local/bin/php",
+        "php-cs-fixer.executablePathWindows": "/home/vscode/.composer/vendor/bin/php-cs-fixer",
+        "phpcbf.executablePath": "/home/vscode/.composer/vendor/bin/phpcbf",
+        "phpcbf.standard": "PSR2",
+        "php.validate.run": "onType",
+        "php.suggest.basic": false,
+        "phpcs.standard": "PSR2",
+        "php-cs-fixer.rules": "@PSR2",
+        "[php]": {
+            "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+        }
     },
     // Add the IDs of extensions you want installed when the container is created.
     "extensions": [
-        "felixfbecker.php-debug",
-        "bmewburn.vscode-intelephense-client",
-        "mrmlnc.vscode-apache"
-    ],
+		"felixfbecker.php-debug",
+		"bmewburn.vscode-intelephense-client",
+		"mrmlnc.vscode-apache",
+		"formulahendry.code-runner",
+		"streetsidesoftware.code-spell-checker",
+		"ikappas.composer",
+		"editorconfig.editorconfig",
+		"eamodio.gitlens",
+		"xyz.local-history",
+		"junstyle.php-cs-fixer",
+		"neilbrayfield.php-docblocker",
+		"felixfbecker.php-pack",
+		"felixfbecker.php-intellisense",
+		"hvyindustries.crane",
+		"mehedidracula.php-namespace-resolver",
+		"linyang95.php-symbols",
+		"persoderlind.vscode-phpcbf",
+		"ikappas.phpcs",
+		"esbenp.prettier-vscode",
+		"liximomo.sftp",
+		"gruntfuggly.todo-tree",
+		"mutantdino.resourcemonitor"
+	],
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     "forwardPorts": [
         8080
