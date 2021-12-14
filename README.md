@@ -20,6 +20,7 @@ docker-php-ext-enable event
 2. `mkdir ~/git` 存放源代码，挂载到容器内/workspaces/git，实现容器销毁后保留代码
 3. `mkdir -p /etc/apache2/sites-enabled`，存放apache站点配置，挂载到容器内/etc/apache2/sites-enabled，实现容器销毁后保存站点配置
 4. 可能会出现Open in Container失败（构建镜像失败），多半是网络问题，把Proxifier开起来就行了
+5. 更新npm不生效可以用`su node -c "npm install -g npm"`
 
 ### 其他
 1. [wsl2自动启动服务并且自动更新hosts文件里的ip](https://my.oschina.net/u/2266306/blog/4561599)
