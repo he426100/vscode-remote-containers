@@ -56,8 +56,6 @@
 		"junstyle.php-cs-fixer",
 		"neilbrayfield.php-docblocker",
 		"felixfbecker.php-pack",
-		"felixfbecker.php-intellisense",
-		"hvyindustries.crane",
 		"mehedidracula.php-namespace-resolver",
 		"linyang95.php-symbols",
 		"persoderlind.vscode-phpcbf",
