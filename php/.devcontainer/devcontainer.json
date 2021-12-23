@@ -28,15 +28,7 @@
             "**/images/**"
         ],
         "local-history.path": "/home/vscode/backup/local history",
-        "php.validate.executablePath": "/usr/local/bin/php",
-        "phpcs.executablePath": "/home/vscode/.composer/vendor/bin/phpcs",
-        "php.executablePath": "/usr/local/bin/php",
         "php-cs-fixer.executablePathWindows": "/home/vscode/.composer/vendor/bin/php-cs-fixer",
-        "phpcbf.executablePath": "/home/vscode/.composer/vendor/bin/phpcbf",
-        "phpcbf.standard": "PSR2",
-        "php.validate.run": "onType",
-        "php.suggest.basic": false,
-        "phpcs.standard": "PSR2",
         "php-cs-fixer.rules": "@PSR2",
         "[php]": {
             "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
@@ -55,9 +47,6 @@
 		"junstyle.php-cs-fixer",
 		"neilbrayfield.php-docblocker",
 		"felixfbecker.php-pack",
-		"persoderlind.vscode-phpcbf",
-		"ikappas.phpcs",
-		"esbenp.prettier-vscode",
 		"liximomo.sftp",
 		"gruntfuggly.todo-tree",
 		"mutantdino.resourcemonitor"
