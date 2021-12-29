@@ -27,7 +27,8 @@ docker-php-ext-enable event
 1. [wsl2自动启动服务并且自动更新hosts文件里的ip](https://my.oschina.net/u/2266306/blog/4561599)
 2. [解决WSL2中Vmmem内存占用过大问题](https://my.oschina.net/u/2266306/blog/4680942)
 3. [wsl2使用docker实现开机自启redis,mysql](https://my.oschina.net/u/2266306/blog/5354632)
-4. [迁移wsl到其他盘](https://github.com/pxlrbt/move-wsl)
+4. [迁移wsl2到其他盘](https://github.com/pxlrbt/move-wsl)
+5. [释放wsl2占用的磁盘空间](https://superuser.com/questions/1606213/how-do-i-get-back-unused-disk-space-from-ubuntu-on-wsl2)
 
 ### 参考资料
 > [适用于 Linux 的 Windows 子系统文档](https://docs.microsoft.com/zh-cn/windows/wsl/)
