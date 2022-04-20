@@ -22,6 +22,7 @@ docker-php-ext-enable event
 4. 可能会出现Open in Container失败（构建镜像失败），多半是网络问题，把Proxifier开起来就行了
 5. 更新npm不生效可以用`su node -c "npm install -g npm"`
 6. xdebug和phpcs冲突需要设置xdebug.start_with_request = trigger，命令行下调试需要先执行`export XDEBUG_SESSION=1`，其他调试问题看官方文档[https://xdebug.org/docs/](https://xdebug.org/docs/)
+7. yasd调试hyperf需要在启动命令加上`-e`并且设置OPTION_WORKER_NUM为1
 
 ### 其他
 1. [wsl2自动启动服务并且自动更新hosts文件里的ip](https://my.oschina.net/u/2266306/blog/4561599)
