@@ -58,9 +58,7 @@ RUN set -ex \
 # --build-arg timezone=Asia/Shanghai
 ARG timezone
 
-ENV TIMEZONE=${timezone:-"Asia/Shanghai"} \
-    APP_ENV=prod \
-    SCAN_CACHEABLE=(true)
+ENV TIMEZONE=${timezone:-"Asia/Shanghai"}
 
 # update
 RUN set -ex \
