@@ -16,8 +16,10 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 # Install redis
-RUN pecl install redis \
-    && echo "extension=$(find /usr/local/lib/php/extensions/ -name redis.so)" > /usr/local/etc/php/conf.d/redis.ini \
+RUN set -ex \
+    && pecl update-channels \
+    && pecl install redis \
+    && docker-php-ext-enable redis \
     && rm -rf /tmp/pear
 
 # [Optional] Uncomment this line to install global node packages.

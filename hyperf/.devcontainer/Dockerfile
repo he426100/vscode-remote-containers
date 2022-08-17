@@ -22,7 +22,6 @@ RUN \
     mv /usr/local/etc/php/conf.d/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini-suggested && \
     curl -sfL https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer && \
     chmod +x /usr/bin/composer                                                                     && \
-    composer self-update 2.2.6                                                    && \
     apt-get update              && \
     apt-get install -y             \
         inotify-tools              \
