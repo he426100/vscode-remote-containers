@@ -8,7 +8,7 @@
             // Update VARIANT to pick a PHP version: 8, 8.1, 8.0, 7, 7.4
             // Append -bullseye or -buster to pin to an OS version.
             // Use -bullseye variants on local on arm64/Apple Silicon.
-            "VARIANT": "8.0-bullseye",
+            "VARIANT": "8.1-bullseye",
             "NODE_VERSION": "lts/*"
         }
     },
@@ -32,21 +32,29 @@
         "php-cs-fixer.rules": "@PSR2",
         "[php]": {
             "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+        },
+        "intelephense.phpdoc.functionTemplate": {
+            "summary": "$1",
+            "tags": [
+                "@param ${1:$SYMBOL_TYPE} $SYMBOL_NAME $2",
+                "@return ${1:$SYMBOL_TYPE} $2"
+            ]
         }
     },
     // Add the IDs of extensions you want installed when the container is created.
     "extensions": [
-		"felixfbecker.php-debug",
+        "MS-CEINTL.vscode-language-pack-zh-hans",
+        "formulahendry.code-runner",
+        "streetsidesoftware.code-spell-checker",
+        "editorconfig.editorconfig",
+        "eamodio.gitlens",
+        "xyz.local-history",
+        "junstyle.php-cs-fixer",
+        "xdebug.php-debug",
 		"bmewburn.vscode-intelephense-client",
-		"formulahendry.code-runner",
-		"streetsidesoftware.code-spell-checker",
-		"editorconfig.editorconfig",
-		"eamodio.gitlens",
-		"xyz.local-history",
-		"junstyle.php-cs-fixer",
-		"liximomo.sftp",
-		"gruntfuggly.todo-tree",
-		"mutantdino.resourcemonitor"
+        "mutantdino.resourcemonitor",
+		"Natizyskunk.sftp",
+		"gruntfuggly.todo-tree"
 	],
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     "forwardPorts": [

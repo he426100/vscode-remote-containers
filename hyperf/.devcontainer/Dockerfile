@@ -1,7 +1,7 @@
 # See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.209.3/containers/php/.devcontainer/base.Dockerfile
 
 # [Choice] PHP version (use -bullseye variants on local arm64/Apple Silicon): 8, 8.1, 8.0, 7, 7.4, 7.3, 8-bullseye, 8.1-bullseye, 8.0-bullseye, 7-bullseye, 7.4-bullseye, 7.3-bullseye, 8-buster, 8.1-buster, 8.0-buster, 7-buster, 7.4-buster
-ARG VARIANT="8.0-bullseye"
+ARG VARIANT="8.1-bullseye"
 FROM mcr.microsoft.com/vscode/devcontainers/php:0-${VARIANT}
 
 # [Choice] Node.js version: none, lts/*, 16, 14, 12, 10
@@ -19,7 +19,6 @@ ENV DEV_MODE $DEV_MODE
 COPY rootfilesystem/ /
 
 RUN \
-    mv /usr/local/etc/php/conf.d/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini-suggested && \
     curl -sfL https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer && \
     chmod +x /usr/bin/composer                                                                     && \
     apt-get update              && \
