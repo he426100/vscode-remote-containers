@@ -22,13 +22,30 @@ RUN set -ex \
     && docker-php-ext-enable redis \
     && rm -rf /tmp/pear
 
+# vscode tunnel
+RUN curl -sL "https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64" \
+    --output /tmp/vscode-cli.tar.gz && \
+    tar -xf /tmp/vscode-cli.tar.gz -C /usr/bin && \
+    rm /tmp/vscode-cli.tar.gz
+
+RUN mkdir /home/vscode/.vscode /workspaces
+RUN chown vscode: /home/vscode/.vscode /workspaces
+
+VOLUME /home/vscode/.vscode
+VOLUME /workspaces
+
 # [Optional] Uncomment this line to install global node packages.
 RUN su vscode -c "source /usr/local/share/nvm/nvm.sh && npm install -g zx" 2>&1
 
 # composer
-USER vscode
 WORKDIR /home/vscode/.composer
+RUN chown vscode: /home/vscode/.composer
+USER vscode
 RUN echo '{"require":{"squizlabs/php_codesniffer":"^3.7","phpmd/phpmd":"^2.13","friendsofphp/php-cs-fixer":"^3.13"}}' > composer.json \
     && composer global install
 
 WORKDIR /workspaces
+EXPOSE 80
+EXPOSE 8080
+
+CMD [ "code", "tunnel", "--accept-server-license-terms" ]
