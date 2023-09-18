@@ -44,7 +44,6 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
-		"golang.Go",
 		"mutantdino.resourcemonitor",
 		"formulahendry.code-runner",
 		"streetsidesoftware.code-spell-checker",
@@ -55,7 +54,7 @@
 		"eamodio.gitlens",
 		"golang.go",
 		"xyz.local-history",
-		"matklad.rust-analyzer",
+		"rust-lang.rust-analyzer",
 		"gruntfuggly.todo-tree"
 	],
 
