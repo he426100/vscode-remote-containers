@@ -32,11 +32,17 @@
         "php-cs-fixer.rules": "@PSR2",
         "[php]": {
             "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+        },
+	"intelephense.phpdoc.functionTemplate": {
+            "summary": "$1",
+            "tags": [
+                "@param ${1:$SYMBOL_TYPE} $SYMBOL_NAME $2",
+                "@return ${1:$SYMBOL_TYPE} $2"
+            ]
         }
     },
     // Add the IDs of extensions you want installed when the container is created.
     "extensions": [
-		"felixfbecker.php-debug",
 		"bmewburn.vscode-intelephense-client",
 		"mrmlnc.vscode-apache",
 		"formulahendry.code-runner",
@@ -45,9 +51,10 @@
 		"eamodio.gitlens",
 		"xyz.local-history",
 		"junstyle.php-cs-fixer",
-		"liximomo.sftp",
+		"Natizyskunk.sftp",
 		"gruntfuggly.todo-tree",
-		"mutantdino.resourcemonitor"
+		"mutantdino.resourcemonitor",
+	        "xdebug.php-debug"
 	],
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     "forwardPorts": [
