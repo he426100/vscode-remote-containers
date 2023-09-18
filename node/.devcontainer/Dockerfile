@@ -12,8 +12,25 @@ FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:0-${VARIANT}
 # ARG EXTRA_NODE_VERSION=10
 # RUN su node -c "source /usr/local/share/nvm/nvm.sh && nvm install ${EXTRA_NODE_VERSION}"
 
+# vscode tunnel
+RUN curl -sL "https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64" \
+    --output /tmp/vscode-cli.tar.gz && \
+    tar -xf /tmp/vscode-cli.tar.gz -C /usr/bin && \
+    rm /tmp/vscode-cli.tar.gz
+
+RUN mkdir /home/node/.vscode /workspaces
+RUN chown node: /home/node/.vscode /workspaces
+
+VOLUME /home/node/.vscode
+VOLUME /workspaces
+
 # [Optional] Uncomment if you want to install more global node modules
 RUN su node -c "npm install -g npm yarn pm2 zx" \
     && npm cache clean --force > /dev/null 2>&1
 
 USER node
+
+EXPOSE 8000
+EXPOSE 3000
+
+CMD [ "code", "tunnel", "--accept-server-license-terms" ]
