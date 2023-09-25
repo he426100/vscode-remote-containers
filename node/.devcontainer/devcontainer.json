@@ -76,7 +76,7 @@
     "remoteUser": "node",
     "forwardPorts": "8000",
     "features": {
-        "git": "latest"
+        "ghcr.io/devcontainers/features/git:1": {}
     },
     "mounts": [
         "source=${localEnv:HOME}${localEnv:USERPROFILE}/git,target=/workspaces/git,type=bind,consistency=cached",
