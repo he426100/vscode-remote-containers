@@ -35,4 +35,4 @@ docker-php-ext-enable event
 > [适用于 Linux 的 Windows 子系统文档](https://docs.microsoft.com/zh-cn/windows/wsl/)  
 > [https://code.visualstudio.com/docs/remote/containers](https://code.visualstudio.com/docs/remote/containers)  
 > [https://code.visualstudio.com/docs/remote/devcontainerjson-reference](https://code.visualstudio.com/docs/remote/devcontainerjson-reference)  
-> [https://github.com/microsoft/vscode-dev-containers/blob/main/containers/php/](https://github.com/microsoft/vscode-dev-containers/blob/main/containers/php/)  
+> [https://github.com/devcontainers/images/blob/main/src/php](https://github.com/devcontainers/images/blob/main/src/php)
