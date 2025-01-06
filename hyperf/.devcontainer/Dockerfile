@@ -29,7 +29,7 @@ RUN \
         unzip                      \
         zlib1g-dev                 \
         --no-install-recommends && \
-    install-swoole.sh master \
+    install-swoole.sh v5.1.6 \
         --enable-http2        \
         --enable-mysqlnd      \
         --enable-swoole-pgsql \
