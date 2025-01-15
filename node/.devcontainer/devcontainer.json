@@ -35,7 +35,6 @@
         "emmet.includeLanguages": {
             "wxml": "html"
         },
-        "vetur.format.defaultFormatter.js": "vscode-typescript",
         "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
         "[html]": {
             "editor.defaultFormatter": "vscode.html-language-features"
@@ -44,7 +43,7 @@
             "editor.defaultFormatter": "esbenp.prettier-vscode"
         },
         "[vue]": {
-            "editor.defaultFormatter": "octref.vetur"
+            "editor.defaultFormatter": "Vue.volar"
         }
     },
     // Add the IDs of extensions you want installed when the container is created.
@@ -66,7 +65,7 @@
 		"esbenp.prettier-vscode",
 		"stylelint.vscode-stylelint",
 		"gruntfuggly.todo-tree",
-		"octref.vetur"
+		"Vue.volar"
 	],
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // "forwardPorts": [],
